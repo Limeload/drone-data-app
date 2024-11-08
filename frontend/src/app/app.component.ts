@@ -1,28 +1,44 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { DataService } from './services/apiservice.service';
+import { DatasetsService } from './services/datasets.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 
 })
 export class AppComponent implements OnInit {
   title = 'frontend';
-  newData: any;
+  datasetFiles: string[] = [];
+  datasetData: any = {};
+  loading: boolean = true;
+  filename: any;
 
-  constructor(private _dataservice:DataService) { }
+  constructor(
+    private _datasetsService: DatasetsService
+  ) {}
 
   ngOnInit() {
-	this.getData();
+  this.getDatasets();
 }
 
-getData(){
-  this._dataservice.getData().subscribe((res: any)=>{
-  	this.newData=res;
-})
+getDatasets(){
+  this._datasetsService.getDatasets().subscribe((response: any) => {
+    this.datasetFiles = response.datasets as string[];
+    this.loading = false;
+  });
+}
+
+getDataset(filename: string){
+  this.loading = true;
+  this._datasetsService.getDataset(filename).subscribe(data => {
+    this.datasetData[filename] = data;
+    this.loading = false;
+  });
 }
 }
+
+
