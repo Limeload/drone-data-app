@@ -1,0 +1,25 @@
+[
+    {
+        "image_id": "005",
+        "timestamp": "2024-09-24 14:44:56",
+        "latitude": "44.4282° N",
+        "longitude": "110.5879° W",
+        "altitude_m": 80,
+        "heading_deg": 315,
+        "file_name": "YNP_005.jpg",
+        "camera_tilt_deg": -10,
+        "focal_length_mm": 24,
+        "iso": 100,
+        "shutter_speed": "1/250",
+        "aperture": "f/2.8",
+        "color_temp_k": 5400,
+        "image_format": "RAW+JPEG",
+        "file_size_mb": 24.9,
+        "drone_speed_mps": 6.7,
+        "battery_level_pct": 82,
+        "gps_accuracy_m": 0.5,
+        "gimbal_mode": "Free",
+        "subject_detection": "Yes",
+        "image_tags": ["Thermal Pool", "Bacteria"]
+        }
+]

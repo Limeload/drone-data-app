@@ -1,0 +1,25 @@
+[
+    {
+        "image_id": "002",
+        "timestamp": "2024-09-24 14:33:22",
+        "latitude": "44.4279° N",
+        "longitude": "110.5890° W",
+        "altitude_m": 75,
+        "heading_deg": 180,
+        "file_name": "YNP_002.jpg",
+        "camera_tilt_deg": -30,
+        "focal_length_mm": 35,
+        "iso": 200,
+        "shutter_speed": "1/1000",
+        "aperture": "f/4",
+        "color_temp_k": 5200,
+        "image_format": "RAW+JPEG",
+        "file_size_mb": 27.1,
+        "drone_speed_mps": 3.8,
+        "battery_level_pct": 95,
+        "gps_accuracy_m": 0.6,
+        "gimbal_mode": "Free",
+        "subject_detection": "No",
+        "image_tags": ["Forest", "River"]
+        }
+]

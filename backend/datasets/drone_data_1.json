@@ -1,0 +1,25 @@
+[
+    {
+    "image_id": "001",
+    "timestamp": "2024-09-24 14:31:05",
+    "latitude": "44.4280° N",
+    "longitude": "110.5885° W",
+    "altitude_m": 50,
+    "heading_deg": 270,
+    "file_name": "YNP_001.jpg",
+    "camera_tilt_deg": -15,
+    "focal_length_mm": 24,
+    "iso": 100,
+    "shutter_speed": "1/500",
+    "aperture": "f/2.8",
+    "color_temp_k": 5600,
+    "image_format": "RAW+JPEG",
+    "file_size_mb": 25.4,
+    "drone_speed_mps": 5.2,
+    "battery_level_pct": 98,
+    "gps_accuracy_m": 0.5,
+    "gimbal_mode": "Follow",
+    "subject_detection": "Yes",
+    "image_tags": ["Geyser", "Steam"]
+    }
+]

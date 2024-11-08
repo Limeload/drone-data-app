@@ -1,0 +1,25 @@
+[
+    {
+        "image_id": "004",
+        "timestamp": "2024-09-24 14:40:13",
+        "latitude": "44.4277° N",
+        "longitude": "110.5882° W",
+        "altitude_m": 120,
+        "heading_deg": 0,
+        "file_name": "YNP_004.jpg",
+        "camera_tilt_deg": -45,
+        "focal_length_mm": 70,
+        "iso": 800,
+        "shutter_speed": "1/4000",
+        "aperture": "f/8",
+        "color_temp_k": 6000,
+        "image_format": "RAW+JPEG",
+        "file_size_mb": 28.3,
+        "drone_speed_mps": 1.2,
+        "battery_level_pct": 87,
+        "gps_accuracy_m": 0.7,
+        "gimbal_mode": "Follow",
+        "subject_detection": "No",
+        "image_tags": ["Canyon", "Waterfall"]
+        }
+]
