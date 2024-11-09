@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class DatasetsService {
-
   constructor(private http: HttpClient) {}
 
   getDatasets(){
@@ -14,5 +14,9 @@ export class DatasetsService {
 
   getDataset(filename: string){
     return this.http.get(`http://127.0.0.1:5000/api/dataset/${filename}`);
+  }
+
+  sendQuery(query: string) {
+    return this.http.post('http://127.0.0.1:5000/query', { query });
   }
 }

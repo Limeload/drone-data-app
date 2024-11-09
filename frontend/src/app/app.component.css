@@ -1,63 +1,82 @@
-h1 {
-    text-align: center;
-    font-size: 2rem;
-  }
+.app-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
 
-  h3 {
-    text-align: center;
-    color: #555;
-  }
+.app-title {
+  text-align: center;
+  color: #333;
+}
 
-  .datasets {
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-  }
+.query-section, .datasets-section, .drone-data-section {
+  margin-bottom: 20px;
+}
 
-  .datasets ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
+.query-input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
 
-  .datasets li {
-    margin: 10px 0;
-  }
+.query-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-  }
+.query-button:hover {
+  background-color: #0056b3;
+}
 
-  button:hover {
-    background-color: #45a049;
-  }
+.response-display {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
 
-  .drone-table {
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
+.datasets-list {
+  list-style-type: none;
+  padding: 0;
+}
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
+.dataset-button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-  th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
+.dataset-button:hover {
+  background-color: #218838;
+}
 
-  th {
-    background-color: #f2f2f2;
-  }
+.drone-data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-  tr:hover {
-    background-color: #f1f1f1;
-  }
+.drone-data-table th, .drone-data-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.drone-data-table th {
+  background-color: #f8f9fa;
+  color: #333;
+}

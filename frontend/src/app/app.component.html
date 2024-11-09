@@ -1,34 +1,51 @@
-<h1>Drone Data App</h1>
+<div class="app-container">
+  <h1 class="app-title">Drone Data Dashboard</h1>
 
-<h3>Welcome</h3>
+  <!-- Query Section -->
+  <section class="query-section">
+    <h3>Ask a Question About the Drone Data</h3>
+    <input
+      [(ngModel)]="query"
+      placeholder="e.g., 'What is the altitude of the second image?'"
+      class="query-input"
+    />
+    <button (click)="sendQuery()" class="query-button">Submit</button>
+    <div *ngIf="response" class="response-display">
+      <h2>AI Response:</h2>
+  <pre>{{ response }}</pre>
+    </div>
+  </section>
 
-<div class="datasets">
-  <h3>Available Datasets</h3>
-  <ul>
-    <li *ngFor="let filename of datasetFiles">
-      <button (click)="getDataset(filename)">{{ filename }}</button>
-    </li>
-  </ul>
-</div>
+  <!-- Dataset List Section -->
+  <section class="datasets-section">
+    <h3>Available Datasets</h3>
+    <ul class="datasets-list">
+      <li *ngFor="let filename of datasetFiles">
+        <button (click)="getDataset(filename)" class="dataset-button">{{ filename }}</button>
+      </li>
+    </ul>
+  </section>
 
-<div *ngFor="let filename of datasetFiles" class="drone-table">
-  <h4>{{ filename }}</h4>
-  <table *ngIf="datasetData[filename]">
-    <thead>
-      <tr>
-        <th>Image ID</th>
-        <th>Timestamp</th>
-        <th>Altitude</th>
-        <th>Battery Level</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let data of datasetData[filename]">
-        <td>{{ data.image_id }}</td>
-        <td>{{ data.timestamp }}</td>
-        <td>{{ data.altitude_m }} m</td>
-        <td>{{ data.battery_level_pct }}%</td>
-      </tr>
-    </tbody>
-  </table>
+  <!-- Drone Data Display Section -->
+  <section *ngFor="let filename of datasetFiles" class="drone-data-section">
+    <h4>{{ filename }}</h4>
+    <table *ngIf="datasetData[filename]" class="drone-data-table">
+      <thead>
+        <tr>
+          <th>Image ID</th>
+          <th>Timestamp</th>
+          <th>Altitude (m)</th>
+          <th>Battery Level (%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of datasetData[filename]">
+          <td>{{ data.image_id }}</td>
+          <td>{{ data.timestamp }}</td>
+          <td>{{ data.altitude_m }} m</td>
+          <td>{{ data.battery_level_pct }}%</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 </div>

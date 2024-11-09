@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { DatasetsService } from './services/datasets.service';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 
@@ -16,6 +18,8 @@ export class AppComponent implements OnInit {
   datasetData: any = {};
   loading: boolean = true;
   filename: any;
+  query: string = '';
+  response: string = '';
 
   constructor(
     private _datasetsService: DatasetsService
@@ -38,6 +42,19 @@ getDataset(filename: string){
     this.datasetData[filename] = data;
     this.loading = false;
   });
+}
+
+sendQuery() {
+  this._datasetsService.sendQuery(this.query)
+    .subscribe({
+      next: (data: any) => {
+        this.response = data.response;
+      },
+      error: (error) => {
+        console.error('Error fetching data:', error);
+      }
+    });
+
 }
 }
 
